@@ -7,6 +7,7 @@
 **Packages:** tensorflow, pandas, numpy, matplotlib  
 **Install Python Packages:**  ```pip install -r requirements.txt```  
 **FastAPI:** https://youtu.be/t6NI0u_lgNo?list=PLeo1K3hjS3ut2o1ay5Dqh-r1kq6ZU8W0M
+**Dataset:** https://www.kaggle.com/datasets/arjuntejaswi/plant-village
 
 
 ## Data Preprocessing
