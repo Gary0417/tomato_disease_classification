@@ -34,8 +34,8 @@ The hyperparameters used in the model training include:
 - Early stopping: The `EarlyStopping` callback with a patience of 1
 
 ## Training and Validation accuracy`and loss
-<img src="https://github.com/Gary0417/tomato_disease_classification/data_preprocessing_and_model_building/images/training_and_validation_loss.png">
-<img src="https://github.com/Gary0417/tomato_disease_classification/data_preprocessing_and_model_building/images/training_and_validation_accuracy.png">
+<img src="https://github.com/Gary0417/tomato_disease_classification/blob/data_preprocessing_and_model_building/images/training_and_validation_loss.png">
+<img src="https://github.com/Gary0417/tomato_disease_classification/blob/data_preprocessing_and_model_building/images/training_and_validation_accuracy.png">
 
 ## Model performance on test dataset
 - Loss: 0.1086
