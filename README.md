@@ -1,46 +1,47 @@
 # Tomato Disease Classification: Project Overview
-* Created a tool that classify the disease in tomato plants using CNN.
-* Built a FastAPI web server which takes in a request of images and returns the predicted disease with the confidence level.
+
+This project aims to classify diseases in tomato plants using a Convolutional Neural Network (CNN). 
+A FastAPI web server is built to take in requests for images and return predicted diseases with confidence levels.
+
+## Problem Statement
+Tomato diseases can cause significant damage to tomato crops, resulting in decreased yield and economic losses. Early detection and prevention of diseases are crucial for maintaining healthy tomato plants and maximizing crop productivity. This project utilizes CNN-based image classification to identify diseases in tomato plants, offering a potential solution for timely disease detection and management.
 
 ## Code and Resources Used 
 **Python Version:** 3.9  
 **Packages:** tensorflow, pandas, numpy, matplotlib  
 **Install Python Packages:**  ```pip install -r requirements.txt```  
-**FastAPI:** https://youtu.be/t6NI0u_lgNo?list=PLeo1K3hjS3ut2o1ay5Dqh-r1kq6ZU8W0M
+**FastAPI:** https://youtu.be/t6NI0u_lgNo?list=PLeo1K3hjS3ut2o1ay5Dqh-r1kq6ZU8W0M  
+**Dataset:** https://www.kaggle.com/datasets/arjuntejaswi/plant-village
 
 
 ## Data Preprocessing
-Before building a CNN model, I needed to preprocess the data  Here are the steps I took:
+Before building the CNN model, the data is preprocessed using the following steps:
 
-- Loaded data into tf.Dataset
-- Split the dataset into training, validation and test datasets with a ration of 8:1:1.
-- Optimized the performance of input pipelines by catching and prefetching the datasets
-- Resized and rescaled the images
-- Data augmentation
-	- Random Horizontal and Vertical Flips
-	- Random Rotation
-	- Random Contrast
+- Data is loaded into a TensorFlow Dataset.
+- The dataset is split into training, validation, and test datasets with an 8:1:1 ratio.
+- Performance of input pipelines is optimized through caching and prefetching.
+- Images are resized and rescaled.
+- Data augmentation techniques are applied, including random horizontal and vertical flips, random rotation, and random contrast adjustments.
 	
 
 ## Model Building 
-To train the image classification model, i utilized a convolutional neural network (CNN) architecture implemented using TensorFlow's Keras API. 
-The model architecture consists of several Conv2D and MaxPooling2D layers, followed by Flatten and Dropout layers (0.4) for regularization, and finally Dense layers for classification. 
+The image classification model is built using a CNN architecture implemented with TensorFlow's Keras API. The model architecture consists of multiple Conv2D and MaxPooling2D layers, followed by Flatten and Dropout layers (with a dropout rate of 0.4) for regularization, and finally Dense layers for classification.  
+
 The hyperparameters used in the model training include:
-- Optimizer: `Adam` optimizer with its default parameters
+- Optimizer: `Adam` optimizer with default parameters
 - Loss function: `SparseCategoricalCrossentropy` 
 - Metrics: `accuracy`
 - Batch size: 32
 - Number of epochs: 40
-- Early stopping: The `EarlyStopping` callback with a patience of 1
+- Early stopping: `EarlyStopping` callback with a patience of 10
 
-## Training and Validation accuracy`and loss
-<img src="https://github.com/Gary0417/tomato_disease_classification/main/images/training_and_validation_loss.png">
-<img src="https://github.com/Gary0417/tomato_disease_classification/main/images/training_and_validation_accuracy.png">
+## Training and Validation Accuracy and Loss
+The training and validation accuracy and loss are visualized in the following plots:
+<img src="https://github.com/Gary0417/tomato_disease_classification/blob/data_preprocessing_and_model_building/images/training_and_validation_loss.png">
+<img src="https://github.com/Gary0417/tomato_disease_classification/blob/data_preprocessing_and_model_building/images/training_and_validation_accuracy.png">
 
 ## Model performance on test dataset
-- Loss: 0.1086
-- Accuracy 0.9631
+The trained model achieves a loss of 0.1086 and an accuracy of 0.9631 on the test dataset, indicating good performance in disease classification.
 
 ## Productionization 
-In this step, I exported the trained CNN model to a file on disk built a FastAPI web server and test it using postman application. 
-The API takes in a request of images and returns the predicted disease with the confidence level.
+The trained CNN model is exported to a file on disk, and a FastAPI web server is built for serving predictions. The API takes in requests for images and returns predicted diseases with confidence levels, making it a useful tool for practical applications.
