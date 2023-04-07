@@ -10,7 +10,7 @@ Tomato diseases can cause significant damage to tomato crops, resulting in decre
 **Python Version:** 3.9  
 **Packages:** tensorflow, pandas, numpy, matplotlib  
 **Install Python Packages:**  ```pip install -r requirements.txt```  
-**Project Inspiration:** https://www.youtube.com/playlist?list=PLeo1K3hjS3ut49PskOfLnE6WUoOp_2lsD
+**Project Inspiration:** https://www.youtube.com/playlist?list=PLeo1K3hjS3ut49PskOfLnE6WUoOp_2lsD  
 **FastAPI:** https://youtu.be/t6NI0u_lgNo?list=PLeo1K3hjS3ut2o1ay5Dqh-r1kq6ZU8W0M  
 **Dataset:** https://www.kaggle.com/datasets/arjuntejaswi/plant-village
 
