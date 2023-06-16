@@ -38,8 +38,8 @@ The hyperparameters used in the model training include:
 
 ## Training and Validation Accuracy and Loss
 The training and validation accuracy and loss are visualized in the following plots:
-<img src="https://github.com/Gary0417/tomato_disease_classification/blob/data_preprocessing_and_model_building/images/training_and_validation_loss.png">
-<img src="https://github.com/Gary0417/tomato_disease_classification/blob/data_preprocessing_and_model_building/images/training_and_validation_accuracy.png">
+![Training and Validation Loss](images/training_and_validation_loss.png)
+![Training and Validation Accuracy](images/training_and_validation_accuracy.png)
 
 ## Model performance on test dataset
 The trained model achieves a loss of 0.1086 and an accuracy of 0.9631 on the test dataset, indicating good performance in disease classification.
