@@ -46,3 +46,10 @@ The trained model achieves a loss of 0.1086 and an accuracy of 0.9631 on the tes
 
 ## Productionization 
 The trained CNN model is exported to a file on disk, and a FastAPI web server is built for serving predictions. The API takes in requests for images and returns predicted diseases with confidence levels, making it a useful tool for practical applications.
+
+## Hugging Face Spaces
+
+The trained tomato disease classifier is hosted on Hugging Face Spaces. You can access the model and interact with it using the following link:
+[Tomato Disease Classifier on Hugging Face Spaces](https://huggingface.co/spaces/Gary0417/tomato-disease-classification)
+
+![UI](images/ui.png)
